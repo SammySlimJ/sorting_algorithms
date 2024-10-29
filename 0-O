@@ -1,0 +1,3 @@
+O(n)       # Best Case: The array is already sorted.
+O(n^2)     # Average Case: Elements are in a random order.
+O(n^2)     # Worst Case: Elements are in reverse order.
