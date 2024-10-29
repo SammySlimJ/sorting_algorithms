@@ -1,0 +1,3 @@
+O(1)   // Best case: the list is already sorted
+O(n)   // Average case: inserting each element takes linear time
+O(n^2) // Worst case: the list is sorted in reverse order
