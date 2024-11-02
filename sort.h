@@ -39,4 +39,20 @@ void radix_sort(int *array, size_t size);
 void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
 
+/**
+ * struct deck_node_s - Deck of card
+ * @card: Pointer to the card of the node
+ * @prev: Pointer to the previous node of the list
+ * @next: Pointer to the next node of the list
+ */
+typedef struct deck_node_s
+{
+    const card_t *card;
+    struct deck_node_s *prev;
+    struct deck_node_s *next;
+} deck_node_t;
+
+/* Function to sort a deck of cards */
+void sort_deck(deck_node_t **deck);
+
 #endif /* SORT_H */
