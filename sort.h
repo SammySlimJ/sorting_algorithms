@@ -21,6 +21,18 @@ typedef struct listint_s
     struct listint_s *next;
 } listint_t;
 
+/**
+ * struct deck_node_s - Doubly linked list node for a deck of cards
+ * @value: Card value
+ * @prev: Pointer to the previous element of the list
+ * @next: Pointer to the next element of the list
+ */
+typedef struct deck_node_s
+{
+    const char *value;
+    struct deck_node_s *prev;
+    struct deck_node_s *next;
+} deck_node_t;
 /* Printing helper functions */
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
@@ -39,20 +51,7 @@ void radix_sort(int *array, size_t size);
 void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
 
-/**
- * struct deck_node_s - Deck of card
- * @card: Pointer to the card of the node
- * @prev: Pointer to the previous node of the list
- * @next: Pointer to the next node of the list
- */
-typedef struct deck_node_s
-{
-    const card_t *card;
-    struct deck_node_s *prev;
-    struct deck_node_s *next;
-} deck_node_t;
-
-/* Function to sort a deck of cards */
+/* Deck sort */
 void sort_deck(deck_node_t **deck);
 
 #endif /* SORT_H */
